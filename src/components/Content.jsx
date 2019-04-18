@@ -1,9 +1,10 @@
 import React from 'react';
+import tree from '../assets/images/tree.jpg';
 
 function Content(){
   return (
     <div>
-      <h3>three.js is used in a wide variety of sites for countless purposes</h3>
+      <img src={tree} alt="a tree"/>
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default class Model extends Component {
             justify-content: center;
           }
           `}</style>
-        <Link to="/"><div className='header-header' ref={element => this.threeRootElement = element} ></div></Link>
+        <Link to="/highlights"><div className='header-header' ref={element => this.threeRootElement = element} ></div></Link>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import SceneSubject from './SceneSubject';
 import GeneralLights from './GeneralLights';
-
 export default canvas => {
 
   const clock = new THREE.Clock();
@@ -16,6 +15,7 @@ export default canvas => {
     x: 0,
     y: 0
   };
+
 
   const scene = buildScene();
   const renderer = buildRender(screenDimensions);
@@ -45,7 +45,7 @@ export default canvas => {
     const aspectRatio = width / height;
     const fieldOfView = 60;
     const nearPlane = 4;
-    const farPlane = 100;
+    const farPlane = 1000;
     const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
 
     camera.position.z = 40;
@@ -74,8 +74,8 @@ export default canvas => {
   }
 
   function updateCameraPositionRelativeToMouse() {
-    camera.position.x += (  (mousePosition.x * 0.1) - camera.position.x ) * 1;
-    camera.position.y += ( -(mousePosition.y * 0.1) - camera.position.y ) * 1;
+    camera.position.x += (  (mousePosition.x * 0.01) - camera.position.x ) * 1;
+    camera.position.y += (  (mousePosition.y * 0.01) - camera.position.y ) * 1;
     camera.lookAt(origin);
   }
 

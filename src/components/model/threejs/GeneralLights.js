@@ -5,7 +5,7 @@ export default scene => {
 
   const lightIn = new THREE.PointLight('#4CAF50', 30);
   const lightOut = new THREE.PointLight('#2196F3', 10);
-  lightOut.position.set(40,20,40);
+  lightOut.position.set(0, 0, -10);
 
   scene.add(lightIn);
   scene.add(lightOut);
