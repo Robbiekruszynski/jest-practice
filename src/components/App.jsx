@@ -44,7 +44,8 @@ class App extends React.Component {
         <Navbar/>
         <Switch>
           <Route exact path='/' component={Model} />
-          <Route path='/highlights' render={() => <NewPostControl onSubmitNewPost={this.handleSubmitNewPost} postList={this.state.postList} /> } />
+          <Route path='/posts' render={() => <Content /> } />
+          <Route path='/highlights' render={()=><NewPostControl postList={this.state.postList}  onSubmitNewPost={this.handleSubmitNewPost} />} />
           <Route component={Error404} />
         </Switch>
       </div>
@@ -52,5 +53,4 @@ class App extends React.Component {
   }
 }
 
-// <Route path= '/highlights' render={()=><NewPostControl onSubmitNewPost={this.handleSubmitNewPost} />} />
 export default App;
