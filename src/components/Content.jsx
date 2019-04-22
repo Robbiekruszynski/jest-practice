@@ -1,10 +1,17 @@
 import React from 'react';
-import tree from '../assets/images/tree.jpg';
+import Post from './Post';
+import NewPost from './NewPost';
+import ConfirmNewPost from './ConfirmNewPost';
 
-function Content(){
+function Content(props) {
   return (
     <div>
-      <img src={tree} alt="a tree"/>
+      {props.postList.map((post, index) =>
+        <Post title={post.title}
+          author={post.author}
+          details={post.details}
+          key={index} />
+      )}
     </div>
   );
 }

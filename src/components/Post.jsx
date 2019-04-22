@@ -10,7 +10,6 @@ function Post(props){
            font-family: arial;
          }
        `}</style>
-      <p>POST JSX: In this template, the Post file is nested within the Highlights component. For example:</p>
       <h3>{props.title}</h3>
       <h4>{props.author}</h4>
       <p>{props.details}</p>
