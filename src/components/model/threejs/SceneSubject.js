@@ -11,7 +11,7 @@ export default scene => {
   const subjectGeometry5 = (new THREE.IcosahedronGeometry(6, 3));
   const subjectGeometry6 = (new THREE.IcosahedronGeometry(7, 3));
 
-  const geometry = new THREE.SphereGeometry(1, 50, 50, 0, Math.PI * 2, 0, Math.PI * 2);
+  const geometry = new THREE.SphereGeometry(1, 50, 50, 0, Math.PI * 4, 0, Math.PI * 1);
   const material = new THREE.MeshStandardMaterial();
   // material.alphaMap = new THREE.TextureLoader().load(alphaTexture);
   // material.alphaMap.magFilter = THREE.NearestFilter;

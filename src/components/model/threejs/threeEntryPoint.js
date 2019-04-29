@@ -29,7 +29,7 @@ export default container => {
     canvas.width  = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    canvasHalfWidth = Math.round(canvas.offsetWidth/2);
+    canvasHalfWidth = Math.round(canvas.offsetWidth/5);
     canvasHalfHeight = Math.round(canvas.offsetHeight/2);
 
     sceneManager.onWindowResize();

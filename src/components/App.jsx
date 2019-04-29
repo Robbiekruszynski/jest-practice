@@ -36,6 +36,7 @@ class App extends React.Component {
     var newPostList = this.state.postList.slice();
     newPostList.push(newPost);
     this.setState({postList: newPostList});
+    console.log(this.state);
   }
 
   render() {

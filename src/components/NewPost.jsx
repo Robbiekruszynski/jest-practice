@@ -8,7 +8,7 @@ function NewPost(props){
 
   function handleSubmitNewPost(event) {
     event.preventDefault();
-    props.onNewPostCreation({title: _title.value, author: _author.value, _details: _details.value});
+    props.onNewPostCreation({title: _title.value, author: _author.value, details: _details.value});
     _title.value ='';
     _author.value ='';
     _details.value ='';

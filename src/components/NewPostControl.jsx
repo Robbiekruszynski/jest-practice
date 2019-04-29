@@ -9,10 +9,10 @@ class NewPostControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleSubmitNewPost = this.handleSubmitNewPost.bind(this);
+    this.handleEnterNewPost = this.handleEnterNewPost.bind(this);
   }
 
-  handleSubmitNewPost() {
+  handleEnterNewPost() {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
@@ -23,7 +23,7 @@ class NewPostControl extends React.Component {
     if (this.state.formVisibleOnPage) {
       VisibleComponent = <NewPost onNewPostCreation = {this.props.onSubmitNewPost} />;
     } else {
-      VisibleComponent = <ConfirmNewPost onSubmitNewPost={this.handleSubmitNewPost} />;
+      VisibleComponent = <ConfirmNewPost onSubmitNewPost={this.handleEnterNewPost} />;
     }
     return (
       <div>
